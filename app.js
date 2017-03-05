@@ -78,24 +78,22 @@ function arrayMethodToLoop(numbers){
 	//Print the parameter that is being passed through the function
   console.log(numbers);
 	//Use the forEach() method to add 5 to each value in the passed array
+	var changedArray = [];
+
 	numbers.forEach(function(curr, index){
-		//var curr = console.log(curr);
-		//var index = console.log(index);
-		//var arr = console.log(arr);
-		curr + 5;
-		//console.log(curr + 5);
-
-		var splices = numbers.splice(numbers.length, index);
-		console.log(splices);
+		//console.log(curr);
+		//console.log(index);
+		//curr + 5;
+		changedArray.push(curr + 5);
+		changedArray.sort();
+		//console.log(changedArray);
 	})
-  
-
 	//Return the changed array
-	return;
+	return changedArray;
 }
 
 console.log(arrayMethodToLoop([5, 7, 3, 4, 5]));
-console.log(arrayMethodToLoop([5 + 1, 3]));
+//console.log(arrayMethodToLoop([5 + 1, 3]));
 
 /*
 * Demonstrates the array methods: sort(), indexOf(), pop(), and push()
@@ -104,17 +102,19 @@ console.log(arrayMethodToLoop([5 + 1, 3]));
 */
 function moreArrayMethods(priorities){
 	//Print the parameter that is being passed through the function
-
+  console.log(priorities);
 	//Use the method sort() to sort your priorities
-
+  priorities.sort();
 	//Use the method indexOf() to replace "Not Going to Class" to "Going to Class"
-
+  var replace = priorities.indexOf("Not Going to Class");
+  replace = "Going to Class";
 	//Use the method pop() to remove the item at the end of the array
-
+  priorities.pop();
 	//Use the method push() to add a priority that is important to the success of this class and don't forget to sort() them afterwards!
-
+  priorities.push("Studying");
+  priorities.sort();
 	//Return the changed array
-	return;
+	return priorities;
 }
 
 console.log(moreArrayMethods(["Zero Play", "Sleeping", "HW", "Work", "School", "Planning For Future", "Not Going to Class"]));
