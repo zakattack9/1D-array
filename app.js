@@ -1,6 +1,6 @@
 /*
 * Demonstrates array declarions by storing single variables into an array.
-*
+
 * Return Cars (array), Cars length	
 */
 function cars(){
